@@ -28,21 +28,20 @@ namespace Checkpoints
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
         ( 0, uint256("0x000000afd181d9e8643dd7f4aa2fed7d2e27ab0639c0831c00fd90f789bfebba"))
-		( 1, uint256("0x0000047cde3aa40a48e35298a6373e2dcedf86d18d56f2f7950b5c94914349d2"))
-		( 2, uint256("0x000004f155a0ec35087c1005f9eef191d54b8e5548d85b33ec61fd77b598015a"))
-		( 3, uint256("0x0000045fdbec977a916b9bd1348fabbceb472bd881d02812c2586bee67b0239f"))
-		(10, uint256("0x0000086f1fb2a5de50013b5b5a0c6176fc94a2a02ab48ac1ed3e4796df438458"))
-		(137, uint256("0x0000016df1c39f74e80779735d91893fa040efe364cc4598f294d2eb21af4a76"))
-		(289, uint256("0x0aaec486d5a1b0038e0c704af5eec4302b6b3ff122a66b92343f394b14035988"))
-		(339, uint256("0x0000064d8ff45345a7f0f5f780058c63917f40852cbf7911115b9c33b408a7f9"))
-		(470, uint256("0xf87d61923e87456a2ea19541d6a0b20a7eb59c58a1512977842bc503e3609af9"))
-		(534, uint256("0x9e8e8aa8399cf3153da294d9bb7a8479ec0d0dde55f25fb4e0c3aef524042320"))
-		(729, uint256("0x81c3d545abe5be38031187d6f5a2822609e9477146dbf4d4a43ca2a5a123fec9"))
-		(955, uint256("0x02ac040996afa3b9252b191c59229b8cce6d8481ba8a0d64070ca8048264906b"))
-		(1090, uint256("0x00000687a613e5d87a67c834553780310b47b403dc7b31999f64d814ab63418c"))
-		(2947, uint256("0x0000000001e887d79a473b77d860c5dea3ebecc5d674c6f07cb8159fd14b68b3"))
-		(5774, uint256("0x00000000001786f0ae541cd6058ef30b665027e38108597d41b5ac5adc495152"))
-	;
+    		( 1, uint256("0x0000047cde3aa40a48e35298a6373e2dcedf86d18d56f2f7950b5c94914349d2"))
+    		( 2, uint256("0x000004f155a0ec35087c1005f9eef191d54b8e5548d85b33ec61fd77b598015a"))
+    		( 3, uint256("0x0000045fdbec977a916b9bd1348fabbceb472bd881d02812c2586bee67b0239f"))
+    		(10, uint256("0x0000086f1fb2a5de50013b5b5a0c6176fc94a2a02ab48ac1ed3e4796df438458"))
+    		(137, uint256("0x0000016df1c39f74e80779735d91893fa040efe364cc4598f294d2eb21af4a76"))
+    		(289, uint256("0x0aaec486d5a1b0038e0c704af5eec4302b6b3ff122a66b92343f394b14035988"))
+    		(339, uint256("0x0000064d8ff45345a7f0f5f780058c63917f40852cbf7911115b9c33b408a7f9"))
+    		(470, uint256("0xf87d61923e87456a2ea19541d6a0b20a7eb59c58a1512977842bc503e3609af9"))
+    		(534, uint256("0x9e8e8aa8399cf3153da294d9bb7a8479ec0d0dde55f25fb4e0c3aef524042320"))
+    		(729, uint256("0x81c3d545abe5be38031187d6f5a2822609e9477146dbf4d4a43ca2a5a123fec9"))
+    		(955, uint256("0x02ac040996afa3b9252b191c59229b8cce6d8481ba8a0d64070ca8048264906b"))
+    		(1090, uint256("0x00000687a613e5d87a67c834553780310b47b403dc7b31999f64d814ab63418c"))
+    		(2947, uint256("0x0000000001e887d79a473b77d860c5dea3ebecc5d674c6f07cb8159fd14b68b3"))
+    		(5774, uint256("0x00000000001786f0ae541cd6058ef30b665027e38108597d41b5ac5adc495152"));
 
     // TestNet has no checkpoints
     static MapCheckpoints mapCheckpointsTestnet =
@@ -201,7 +200,7 @@ namespace Checkpoints
         return false;
     }
 
-    // Automatically select a suitable sync-checkpoint 
+    // Automatically select a suitable sync-checkpoint
     uint256 AutoSelectSyncCheckpoint()
     {
         const CBlockIndex *pindex = pindexBest;
@@ -246,7 +245,7 @@ namespace Checkpoints
             return false;
         if (hashBlock == hashPendingCheckpoint)
             return true;
-        if (mapOrphanBlocks.count(hashPendingCheckpoint) 
+        if (mapOrphanBlocks.count(hashPendingCheckpoint)
             && hashBlock == WantedByOrphan(mapOrphanBlocks[hashPendingCheckpoint]))
             return true;
         return false;
