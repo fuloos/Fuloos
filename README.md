@@ -25,3 +25,4 @@ Maximum Stake Age : 7 Days
 
 Coin Maturity : 77 Block
 "# localtradecoin" 
+"# localtradecoin" 
