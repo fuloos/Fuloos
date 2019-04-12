@@ -19,8 +19,14 @@ Block Halving Rate: 10,000 Blocks
  
 Total Coins: 100,000,000
 
-Minimum Stake Age : 24 Hour
+Premine Coins: 80,000,000
 
-Maximum Stake Age : 7 Days 
+Minimum Stake Age : 4 hours
 
-Coin Maturity : 77 Block
+Last POW Block: 320
+
+SwiftX Coin: 10,000
+
+Coin Maturity : 11 Block 
+
+Master Node Required: 111,000 FLS
